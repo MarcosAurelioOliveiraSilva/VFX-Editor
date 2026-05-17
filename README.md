@@ -1,28 +1,41 @@
-# VFX-Editor
+# 🌌 VFX Editor — Professional Visual Effects & Shading Studio
 
-Um painel de controle desktop de alta performance desenvolvido para simplificar a administração, edição e monitoramento em tempo real de servidores San Andreas Multiplayer (SA-MP). Chega de gerenciar arquivos por scripts bat ou logs manuais.
-
----
-
-## 🚀 Funcionalidades Principais
-
-### ⚡ Automação & Controle do Servidor
-* **Inicialização Inteligente:** Botão Power de um clique para ligar/desligar o processo `samp-server.exe` de forma limpa.
-* **Sistema de Trava de Segurança:** O botão de inicialização permanece bloqueado caso a estrutura de diretórios obrigatória do SA-MP não seja validada, prevenindo crashes no sistema operacional.
-* **Persistência de Diretório:** Seleção inteligente da pasta raiz do servidor com salvamento automático de caminhos e estados.
-
-### 📟 Monitoramento Ativo (Live Diagnostics)
-* **Console com Live Stream:** Captura e renderização em tempo real de todo o output de texto do terminal do servidor dentro do app.
-* **Protocolo SA-MP Query:** Sistema nativo via comunicação UDP para puxar métricas exatas diretamente da porta do servidor.
-* **Telemetria Avançada:** Contador de jogadores online, monitoramento de Ping (latência) constante e cronômetro de Uptime em tempo real.
-
-### ⚙ Gestão de Configurações & Segurança
-* **Editor Sincronizado de `server.cfg`:** Interface híbrida contendo inputs de campos rápidos para configurações críticas (RCON, MaxPlayers, Port) e um editor em modo RAW para controle total das linhas.
-* **Validação de Arquivos:** Scanner automático na primeira execução para checar a integridade e presença de componentes essenciais.
-* **Onboarding Comercial:** Tela integrada de Termos de Uso (EULA) com aceite obrigatório persistido localmente antes da liberação do painel.
+O **VFX Editor** é uma ferramenta desktop de nova geração desenvolvida em Electron e WebGL (React Three Fiber), projetada especificamente para simplificar a criação, manipulação e exportação de efeitos visuais avançados, shaders e simulações de partículas para jogos.
 
 ---
 
-## 🎨 UI/UX Moderna
-* **Interface Dark Mode:** Visual escuro focado no conforto visual prolongado de desenvolvedores e administradores.
-* **Barra de Status Dinâmica:** Feedback visual instantâneo (cores e animações fluidas) sobre a saúde e conectividade do processo em background.
+## 🚀 Recursos de Destaque (VFX & Materiais)
+
+* **🎨 Estúdio de Efeitos Completamente Interativo**
+  * Visualização 3D em tempo real com controle total de câmera (OrbitControls com limites inteligentes de Zoom, Pan e Rotação).
+  * Gizmos de transformação integrados (Translação, Rotação e Escala) para controle preciso de emissores, portais e malhas.
+
+* **🧠 Inteligência Artificial Integrada (AI Texture Generator)**
+  * Sistema nativo de prompts para gerar mapas de ruído (Noise Maps), mapas de opacidade e texturas procedimentais via IA, aplicando-as instantaneamente nos canais de materiais do seu efeito.
+
+* **🎬 Animação 3D & Rigging System (FBX/GLTF)**
+  * Importação direta de personagens com suporte a esqueletos complexos (`SkinnedMesh`).
+  * Visualizador de articulações (`SkeletonHelper`) e sistema de sockets para acoplar emissores de partículas a ossos específicos (ex: mãos, armas) em tempo real durante as animações.
+
+* **🎵 Áudio Reativo Avançado**
+  * Analisador de espectro de áudio integrado (`AudioAnalyser`). Faça a intensidade do Bloom, a velocidade do Vortex e a emissão de partículas pulsarem em sincronia com arquivos `.MP3` ou `.WAV`.
+
+* **💾 Integração Nativa & Auto-Save**
+  * Manipulação direta de arquivos do sistema operacional via Electron FS (Salvar, Carregar e Abrir Projetos).
+  * Sistema automático de salvamento em background (Auto-Save) para prevenção de perda de dados.
+
+---
+
+## 📦 Notas de Instalação (Windows)
+
+1. Baixe o instalador executável na seção de **Assets** abaixo: `VFX Editor Setup 1.0.0.exe`.
+2. Execute o arquivo e siga o assistente de instalação na tela (com criação automática de atalhos na Área de Trabalho).
+3. *(Alternativo)* Se preferir rodar sem instalação, faça o download da versão portátil `.zip`, extraia o conteúdo e execute o arquivo principal.
+
+---
+
+## 🛠️ Requisitos Técnicos de Exportação
+
+O ecossistema gera uma saída limpa e padronizada em dados estruturados, pronta para integração imediata em pipelines de produção:
+* **Unity:** Compatível com Particle System e nós do VFX Graph.
+* **Unreal Engine:** Estruturado para o sistema Niagara.
