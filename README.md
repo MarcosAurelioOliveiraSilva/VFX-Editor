@@ -1,4 +1,4 @@
-# 🎮 SA-MP Server Dashboard & Controller
+# 🎮 SAMP Manager — Modular Server Studio
 
 Um painel de controle desktop de alta performance desenvolvido para simplificar a administração, edição e monitoramento em tempo real de servidores San Andreas Multiplayer (SA-MP). Chega de gerenciar arquivos por scripts bat ou logs manuais.
 
